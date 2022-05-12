@@ -27,4 +27,9 @@ cp -r $CEF_SDK/Release/*    $PREFIX/lib
 cp -r $CEF_SDK/Resources/*  $PREFIX/lib
 cp -r $CEF_SDK/build/libcef_dll_wrapper/libcef_dll_wrapper.a $PREFIX/lib
 
+#中文字体
+mkdir -p /usr/share/fonts/font \
+   && cp YaHeiConsolas.ttf /usr/share/fonts/font \
+   && chmod 777 /usr/share/fonts/font/YaHeiConsolas.ttf \
+   && fc-cache -fv
 
